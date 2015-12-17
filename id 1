@@ -1,0 +1,9 @@
+#include<stdio.h>
+void main() 
+{ 
+     int i ;
+    while ( scanf("%d",&i) > 0 && i != 42) 
+   {   
+       printf("%d\n ",i);
+   }
+}

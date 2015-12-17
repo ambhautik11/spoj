@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include<math.h>
+int main(void )
+{
+     int t,i,n[10] = {0},flag= 10,m[10]= {0} ,j,k,num;
+     scanf("%d",&t);
+     if ( t<=10)
+    {
+            for (i=0 ; i<t; i++)
+           {
+                 fflush(stdin) ;
+               scanf("%d %d" ,&n[i],&m[i]); 
+        if (!(1 <= n[i] <= m[i] <= 1000000000 && m[i]-n[i] <= 100000))
+                {
+              break ;
+                     flag =1 ;
+                 }
+              
+             }
+    }
+  if (flag != 1)
+       {    
+            for ( i = 0 ; i <t; i++)
+        { 
+            j= n[i] ;
+            while (j<=m[i])
+                  {    
+                       if ( j%2== 0)
+                      {
+                          j++;
+                          continue ;
+                    }
+                  for (k=3 ; k<=sqrt(j) ;k+=2)
+                      {
+                           if ( j%k == 0)
+                                flag = 0  ; 
+                      }
+                     if ( flag != 0)
+                          printf("%d\n",j);
+                      j+=2;
+                     flag = 1 ;
+                  }
+              printf("\n\n");
+              
+          }
+            
+       }
+           
+    
+     
+}

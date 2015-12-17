@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main( void )
+{ 
+    int dg , flag , temp=2,n ;
+    scanf("%d",&n);
+   while ( n!= 0)
+  {
+        dg= n/10 ;
+        flag= dg%2 ;
+       if ( flag != temp)
+          {
+                temp = flag;
+                n = n/10;
+                continue ;
+          }
+       else
+     {
+            flag = 3 ;
+            break ;
+     }
+  }
+   if ( flag == 3 )
+     printf(" no alternante");
+   else 
+     printf("alternante");
+}
